@@ -37,7 +37,7 @@ for (let item of itemList) {
 }
 
 function hideCJ() {
-    console.log('hide');
+    console.log('hide!');
     let css = document.createElement("style");
     css.id = 'delivery-block-style';
     css.type = "text/css";
@@ -46,7 +46,7 @@ function hideCJ() {
 }
 
 function showCJ() {
-    console.log('show');
+    console.log('show!');
     let element = document.querySelector('#delivery-block-style');
     element.parentElement.removeChild(element);
 }

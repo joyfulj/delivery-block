@@ -1,6 +1,6 @@
 {
     "short_name": "Delivery Block",
-    "name": "Delivery Block",
+    "name": "Delivery-Block",
     "manifest_version": 2,
     "content_scripts": [
         {
@@ -9,28 +9,30 @@
                 "https://search.gmarket.co.kr/*"
             ],
             "js": [
-                "content.js"
+                "content.bundle.js"
             ],
             "run_at": "document_end",
             "all_frames": false
         }
     ],
     "browser_action": {
-        "default_icon:": "show.png",
+        "default_icon:": "show-32.png",
         "default_title": "Delivery Block"
     },
     "icons": {
-        "32": "hide.png",
-        "32": "show.png"
-     },
+        "31": "hide-32.png",
+        "32": "show-32.png"
+    },
+    "options_page": "options.html",
     "background": {
         "scripts": [
-            "background.js"
+            "background.bundle.js"
         ]
     },
     "version": "1.0",
     "permissions": [
         "tabs",
         "<all_urls>"
-    ]
+    ],
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'" 
 }
